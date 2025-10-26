@@ -1,0 +1,30 @@
+//  Student Class
+public class student {
+
+    // Students name, year, gpa, and id variables
+    String name;
+    int year;
+    double gpa;
+    int id;
+
+    // This constructor assigns the given info to the student
+    public student(String n, int y, double g, int i) {
+        name = n;
+        year = y;
+        gpa = g;
+        id = i;
+    }
+
+    // Checks to see if the student is on the honor roll
+    public boolean isOnHonorRoll(double honorRollReq) {
+        // Returns true if GPA is greater than or equal to the required GPA
+        return this.gpa >= honorRollReq;
+    }
+
+    // Randomly decides if the student gets a free lunch
+    public boolean getsFreeLunch() {
+        // 50% chance for a student getting a free lunch
+        double chance = Math.random(); // Makes a random number between 0.0 and 1.0
+        return chance < 0.5; // Makes it true 50% of the time
+    }
+}
