@@ -1,0 +1,47 @@
+// Import random for id generation
+import java.util.Random;
+
+// Main
+public class Main {
+    public static void main(String[] args) {
+
+        // Random object to generate random ID numbers
+        Random rand = new Random();
+
+        // 5 students with random 4-digit IDs
+        student student1 = new student("Jeff", 2008, 3.4, rand.nextInt(9000) + 1000);
+        student student2 = new student("Mary", 2002, 3.6, rand.nextInt(9000) + 1000);
+        student student3 = new student("Bobby", 1986, 2.5, rand.nextInt(9000) + 1000);
+        student student4 = new student("Carol", 1990, 2.9, rand.nextInt(9000) + 1000);
+        student student5 = new student("Hank", 1988, 4.0, rand.nextInt(9000) + 1000);
+
+        // GPA requirement for being on the honor roll
+        double honorRollReq = 3.6;
+
+        // Student array for easy looping
+        student[] students = { student1, student2, student3, student4, student5 };
+
+        // Loop through each student and print their results
+        for (student s : students) {
+            System.out.println("Student Name: " + s.name);
+            System.out.println("ID: " + s.id);
+
+            // Check for students honor roll status
+            if (s.isOnHonorRoll(honorRollReq)) {
+                System.out.println(s.name + " is on the Honor Roll!");
+            } else {
+                System.out.println(s.name + " is not on the Honor Roll.");
+            }
+
+            // Checks if student got free lunch
+            if (s.getsFreeLunch()) {
+                System.out.println(s.name + " gets a free lunch!");
+            } else {
+                System.out.println(s.name + " has to pay for lunch.");
+            }
+
+            // prints main
+            System.out.println(); 
+        }
+    }
+}
