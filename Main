@@ -1,3 +1,4 @@
+// Aidan McCormac = 10/26/2025
 // Import random for id generation
 import java.util.Random;
 
@@ -45,3 +46,5 @@ public class Main {
         }
     }
 }
+
+// In this homework I feel that I've gained a greater understanding of how classes work and how to implement methods easily.
